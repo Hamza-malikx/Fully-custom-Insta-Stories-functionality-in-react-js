@@ -1,0 +1,41 @@
+.storiesLoader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.story {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.story img {
+  width: 75px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75px;
+  object-fit: cover;
+}
+.story svg {
+  fill: none;
+  stroke: #8a3ab8;
+  stroke-width: 3px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: loading 4500ms ease-in-out infinite alternate;
+}
+@keyframes loading {
+  100% {
+    stroke: #cd476b;
+    stroke-dasharray: 10;
+    transform: rotate(200deg);
+  }
+}
